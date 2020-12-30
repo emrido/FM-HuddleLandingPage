@@ -9,7 +9,7 @@ body {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
   color: white;
-  height: 100vh;
+  height: 100%;
   background-image: url(./images/bg-mobile.svg);
   background-color: var(--primary-violet);
   background-repeat: no-repeat;
@@ -51,6 +51,11 @@ button {
   box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.15);
 }
 
+button:hover {
+  color: white;
+  background-color: var(--primary-soft-magenta);
+}
+
 main img {
   width: 100%;
 }
@@ -74,6 +79,11 @@ i {
   padding: 0.5em;
 }
 
+i:hover {
+  color: var(--primary-soft-magenta);
+  border-color: var(--primary-soft-magenta);
+}
+
 @media screen and (min-width: 376px) {
   header img {
     width: 12.5em;
@@ -85,6 +95,7 @@ i {
   main {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     text-align: left;
     gap: 3em;
   }
@@ -112,7 +123,13 @@ i {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1441px) {
+  body {
+    background-size: cover;
+  }
+  main .content {
+    width: 50%;
+  }
 }
 .attribution {
   font-size: 0.75em;
@@ -123,5 +140,5 @@ i {
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: white;
 }
